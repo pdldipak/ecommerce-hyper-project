@@ -1,0 +1,36 @@
+.product {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 2rem;
+}
+
+.product-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0;
+}
+img.medium {
+  max-width: 37rem;
+  width: 100%;
+}
+.product-button {
+  display: flex;
+  justify-content: space-between;
+}
+.price {
+  font-size: 2rem;
+}
+
+.btn {
+  padding: 1rem;
+  border: 0.1rem #c0c0c0 solid;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+}
+.btn:hover {
+  border: 0.1rem #808080 solid;
+}

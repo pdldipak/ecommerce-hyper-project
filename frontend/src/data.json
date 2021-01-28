@@ -1,0 +1,162 @@
+{
+     "clothes": [ 
+    {
+      "_id": "1",
+      "name": "Organic knit cotton bodysuits Shirt for child",
+      "category": "Child Cloth",
+      "image": "/images/dress1.jpg",
+      "price": 360,
+      "brand": "Hanna Andersson",
+      "rating": 4.5,
+      "numReviews": 10,
+      "description": "high quality product"
+    },
+    {
+      "_id": "2",
+      "name": "Winter outfit package fir child",
+      "category": "Child Cloth",
+      "image": "/images/dress2.jpg",
+      "price": 200,
+      "brand": "Old Navy",
+      "rating": 4.0,
+      "numReviews": 10,
+      "description": "high quality product"
+    },
+    {
+      "_id": "3",
+      "name": "Lacoste Free Shirt",
+      "category": "Child Cloth",
+      "image": "/images/dress3.jpg",
+      "price": 320,
+      "brand": "Freshly Picked",
+      "rating": 4.8,
+      "numReviews": 15,
+      "description": "high quality product"
+    },
+    {
+      "_id": "4",
+      "name": "Organic knit cotton pant and short",
+      "category": "Child Cloth",
+      "image": "/images/dress4.jpg",
+      "price": 398,
+      "brand": "Hanna Andersson",
+      "rating": 4.5,
+      "numReviews": 17,
+      "description": "high quality product"
+    },
+    {
+      "_id": "5",
+      "name": "Black slim shit for child",
+      "category": "Child Cloth",
+      "image": "/images/dress1.jpg",
+      "price": 225,
+      "brand": "Goumi",
+      "rating": 4.5,
+      "numReviews": 10,
+      "description": "high quality product"
+    },
+    {
+      "_id": "6",
+      "name": "Very much comfortable cloth for child",
+      "category": "Child Cloth",
+      "image": "/images/dress6.jpg",
+      "price": 159,
+      "brand": "Old Navy",
+      "rating": 3.5,
+      "numReviews": 25,
+      "description": "high quality product"
+    },
+    {
+      "_id": "7",
+      "name": "Light blue dressy outfits for girl",
+      "category": "Child Cloth",
+      "image": "/images/dress7.jpg",
+      "price": 139,
+      "brand": "Hanna Andersson",
+      "rating": 4.5,
+      "numReviews": 15,
+      "description": "high quality product"
+    },
+    {
+      "_id": "8",
+      "name": "Fresh and incredibly overcoat for baby ",
+      "category": "Child Cloth",
+      "image": "/images/dress4.jpg",
+      "price": 339,
+      "brand": "Old Navy",
+      "rating": 4.5,
+      "numReviews": 15,
+      "description": "high quality product"
+    }
+  ],
+    "shoes": [ 
+    {
+      "_id": "9",
+      "name": "Green best shoes for new born baby",
+      "category": "Child Shoes",
+      "image": "/images/shoes1.jpg",
+      "price": 328,
+      "brand": "Hanna Andersson",
+      "rating": 4.5,
+      "numReviews": 15,
+      "description": "high quality product"
+    },
+    {
+      "_id": "10",
+      "name": "Fresh and incredibly shoes for 1 year old baby ",
+      "category": "Child Shoes",
+      "image": "/images/shoes2.jpg",
+      "price": 220,
+      "brand": "Old Navy",
+      "rating": 4.0,
+      "numReviews": 13,
+      "description": "high quality product"
+    },
+    {
+      "_id": "11",
+      "name": "Attractive shoes for all children",
+      "category": "Child Shoes",
+      "image": "/images/shoes3.jpg",
+      "price": 220,
+      "brand": "Freshly Picked",
+      "rating": 4.8,
+      "numReviews": 17,
+      "description": "high quality product"
+    },
+    {
+      "_id": "12",
+      "name": "Best shoes for newly born baby",
+      "category": "Child Shoes",
+      "image": "/images/shoes1.jpg",
+      "price": 78,
+      "brand": "Hanna Andersson",
+      "rating": 4.5,
+      "numReviews": 14,
+      "description": "high quality product"
+    },
+    {
+      "_id": "13",
+      "name": "Shoes for newly born Baby-girl",
+      "category": "Child Shoes",
+      "image": "/images/shoes5.jpg",
+      "price": 65,
+      "brand": "Goumi",
+      "rating": 4.0,
+      "numReviews": 10,
+      "description": "high quality product"
+    },
+    {
+      "_id": "14",
+      "name": "Fresh and incredibly shoes fit for baby Girl ",
+      "category": "Child Shoes",
+      "image": "/images/shoes6.jpg",
+      "price": 159,
+      "brand": "Old Navy",
+      "rating": 5.0,
+      "numReviews": 15,
+      "description": "high quality product"
+    }
+  ]
+}
+
+
