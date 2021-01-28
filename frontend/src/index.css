@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css');
 
 html {
   font-size: 62.5%;
@@ -9,8 +10,7 @@ body {
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
-  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,11 +25,21 @@ h1 {
 h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
+  color: #0a0a0a;
+}
+h2:hover {
+  color: #ffd000;
 }
 
 a {
+  color: #ffffff;
   text-decoration: none;
 }
+
 a:hover {
-  color: #0066ff;
+  color: #ffd000;
+}
+
+li {
+  list-style-type: none;
 }

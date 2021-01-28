@@ -1,0 +1,39 @@
+.offer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8rem;
+}
+.offer-col-2 {
+  flex-basis: 50%;
+  min-width: 25rem;
+}
+.offer-col-2 img {
+  max-width: 60%;
+  max-height: 30%;
+  border-radius: 2rem;
+  padding: 5rem 0;
+}
+
+.offer-col-2 h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 2.5rem 0;
+}
+.btn-special {
+  display: flex;
+  float: center;
+  background-color: #157347;
+  color: #ffffff;
+  padding: 0.8rem 3rem;
+  margin: 3rem 0;
+  border-radius: 2rem;
+  border: 0.1rem #c0c0c0 solid;
+  transition: 'background 0.5s';
+}
+
+.btn-special:hover {
+  background: #2fad73;
+  border: 0.1rem #808080 solid;
+}

@@ -1,0 +1,12 @@
+.col-2 {
+  margin: 1rem;
+}
+
+.col-2 img {
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+
+.col-2 img:hover {
+  filter: grayscale(0);
+}
