@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as Link1 } from 'react-scroll';
 import './header.css';
 
 const Header = () => {
@@ -15,10 +16,24 @@ const Header = () => {
             <a href='/'>Home</a>
           </li>
           <li>
-            <a href='/'>Products</a>
+            <a href='/'>
+                Products
+            </a>
           </li>
           <li>
-            <a href='/'>Contact</a>
+            <a href='/'>
+              {' '}
+              <Link1
+                activeClass='active'
+                to='cloth'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={100}
+              >
+                Shoes
+              </Link1>
+            </a>
           </li>
           <li>
             <a href='/'>Account</a>

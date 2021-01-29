@@ -43,3 +43,10 @@ a:hover {
 li {
   list-style-type: none;
 }
+
+.success {
+  color: #20a020;
+}
+.error {
+  color: #a02020;
+}

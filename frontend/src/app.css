@@ -52,7 +52,7 @@ footer {
   align-items: center;
 }
 
-.products {
+.products-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
