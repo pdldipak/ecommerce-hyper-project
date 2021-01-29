@@ -18,24 +18,20 @@ const Header = () => {
             <a href='/'>Products</a>
           </li>
           <li>
-            <a href='/'>About</a>
-          </li>
-          <li>
             <a href='/'>Contact</a>
           </li>
           <li>
             <a href='/'>Account</a>
           </li>
+          <li>
+            <a href='/'>
+              <i
+                className='bi bi-bag-plus'
+                style={{ 'font-size': '2.5rem' }}
+              />
+            </a>
+          </li>
         </ul>
-      </div>
-      <div>
-        {' '}
-        <a href='/'>
-          <i
-            className='bi bi-bag-plus'
-            style={{ 'font-size': '3rem' }}
-          />
-        </a>
       </div>
     </div>
   );

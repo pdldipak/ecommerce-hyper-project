@@ -1,21 +1,27 @@
 .offer-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin: 5rem;
   padding: 0 8rem;
 }
 .offer-col-2 {
   flex-basis: 50%;
-  min-width: 25rem;
-}
-.offer-col-2 img {
-  max-width: 60%;
-  max-height: 30%;
-  border-radius: 2rem;
-  padding: 5rem 0;
 }
 
+.offer-col-2 img {
+  width: 45rem;
+  height: 45rem;
+  border-radius: 50%;
+  padding: 5rem;
+  clip-path: circle(100%);
+  transition: clip-path 1s;
+}
+
+.offer-col-2 img:hover {
+  clip-path: circle(30%);
+}
 .offer-col-2 h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -37,3 +43,6 @@
   background: #2fad73;
   border: 0.1rem #808080 solid;
 }
+
+
+

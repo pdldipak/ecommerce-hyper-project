@@ -2,6 +2,7 @@
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
   border-radius: 0.5rem;
+  max-width:30rem;
   margin: 2rem;
 }
 
@@ -13,7 +14,6 @@
   margin: 0;
 }
 img.medium {
-  max-width: 37rem;
   width: 100%;
 }
 .product-button {

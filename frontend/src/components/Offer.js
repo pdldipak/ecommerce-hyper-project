@@ -1,7 +1,7 @@
 import React from 'react';
 import './offer.css';
 
-function Offer() {
+function Offer({ product }) {
   return (
     <div className='offer-row'>
       <div className='offer-col-2'>
@@ -30,7 +30,7 @@ function Offer() {
         </button>
       </div>
       <div className='offer-col-2'>
-        <img src='images/dress5.jpg' alt='special offer' />
+        <img src={product.image} alt={product.name} />
       </div>
     </div>
   );

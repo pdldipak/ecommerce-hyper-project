@@ -12,8 +12,11 @@
 header {
   grid-area: header;
   background-color: #00b0b1;
-  display: flex;
   padding: 2rem 0;
+  display: inline-block;
+}
+header > div {
+  display: flex;
 }
 main {
   grid-area: main;

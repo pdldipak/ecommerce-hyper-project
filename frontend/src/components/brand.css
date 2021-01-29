@@ -3,6 +3,9 @@
 }
 
 .col-2 img {
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
   cursor: pointer;
   filter: grayscale(100%);
 }

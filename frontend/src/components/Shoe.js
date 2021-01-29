@@ -2,8 +2,7 @@ import React from 'react';
 import './product.css';
 import Rating from './Rating';
 
-export default function Shoe(props) {
-  const { product } = props;
+export default function Shoe({product}) {
   return (
     <div key={product._id} className='product'>
       <a href={`/product/${product._id}`}>

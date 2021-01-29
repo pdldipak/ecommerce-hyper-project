@@ -3,19 +3,13 @@
   top: 0;
   color: #fff;
   justify-content: space-between;
-  z-index: 1;
-  padding: 1rem;
+  padding: 1rem 4rem;
 }
 
 a.brand {
   color: #ffffff;
   font-size: 2.5rem;
   font-weight: bold;
-}
-
-.nav-block {
-  flex: 1;
-  align-items: right;
 }
 
 .nav-block ul {
@@ -30,6 +24,6 @@ a.brand {
 }
 
 .nav-block li a:hover {
-  background: #BFC0C2;
+  background: #bfc0c2;
   border-radius: 5px;
 }
