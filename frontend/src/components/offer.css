@@ -30,7 +30,7 @@
 .btn-special {
   display: flex;
   float: center;
-  background-color: #157347;
+  background-color: #20bf6b;
   color: #ffffff;
   padding: 0.8rem 3rem;
   margin: 3rem 0;
@@ -44,5 +44,7 @@
   border: 0.1rem #808080 solid;
 }
 
-
-
+.btn-special:focus {
+  outline: none;
+  box-shadow: none;
+}

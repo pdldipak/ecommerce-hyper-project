@@ -22,9 +22,9 @@ function HomeScreen() {
         <Offer key={product._id} product={product} />
       ))}
       <div className='product-heading'>
-        <h1>Feature Products: Shoes</h1>
+        <h1>Feature Products: Clothes</h1>
       </div>
-      <div className='products'>
+      <div className='products-container'>
         {clothes.map((product) => (
           <Product key={product._id} product={product} />
         ))}
@@ -32,12 +32,12 @@ function HomeScreen() {
       <div className='product-heading'>
         <h1>Feature Products: Shoes</h1>
       </div>
-      <div className='products'>
+      <div className='products-container' id='cloth'>
         {shoes.map((product) => (
           <Product key={product._id} product={product} />
         ))}
       </div>
-      <div className='product-heading'>
+      <div className='product-heading' id='brand'>
         <h1>Brand we trust so you</h1>
         <Brands />
       </div>
