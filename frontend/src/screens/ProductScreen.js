@@ -13,7 +13,13 @@ const ProductScreen = (props) => {
   }
   return (
     <div>
-      <Link to='/'><i className="bi bi-arrow-left-short" style={{'font-size': '3rem'}}></i>Back to Home</Link>
+      <Link to='/'>
+        <i
+          className='bi bi-arrow-left-short'
+          style={{ 'font-size': '3rem' }}
+        ></i>
+        Back to Home
+      </Link>
       <div className='productScreen-row'>
         <div className='productScreen-col-2'>
           <img
@@ -56,7 +62,7 @@ const ProductScreen = (props) => {
                     {product.countInStock > 0 ? (
                       <span className='success'>In Stock</span>
                     ) : (
-                      <span className='error'>Unavailable</span>
+                      <span className='danger'>Unavailable</span>
                     )}
                   </div>
                 </div>

@@ -5,15 +5,14 @@ import Rating from './Rating';
 export default function Product({ product }) {
   return (
     <div key={product._id} className='product-card'>
-      <a href={`/product/${product._id}`}>
-        <div className='image-container'>
-          <img
-            className='medium'
-            src={product.image}
-            alt={product.name}
-          />
-        </div>
-      </a>
+      <div className='image-container'>
+        <img
+          className='medium'
+          src={product.image}
+          alt={product.name}
+        />
+      </div>
+
       <div className='product-body'>
         <a href={`/product/${product._id}`}>
           <h2>{product.name}</h2>
@@ -24,7 +23,10 @@ export default function Product({ product }) {
         ></Rating>
         <div className='product-button'>
           <div className='price'>{`Kr ${product.price}`}</div>
-          <div className='btn btn-success'>Add to cart</div>
+          <a href={`/product/${product._id}`}>
+            {' '}
+            <div className='btn btn-success'>Add to cart</div>
+          </a>
         </div>
       </div>
     </div>

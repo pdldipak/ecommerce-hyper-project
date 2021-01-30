@@ -47,6 +47,22 @@ li {
 .success {
   color: #20a020;
 }
-.error {
-  color: #a02020;
+.danger {
+  color: #f01212;
+}
+.alert {
+  padding: 1rem;
+  border: 0.2rem solid transparent;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert-info {
+  color: #f01212;
+  background-color: #e0e0ff;
+}
+.alert-danger {
+  color: #f01212;
+  background-color: #cec0c0;
 }

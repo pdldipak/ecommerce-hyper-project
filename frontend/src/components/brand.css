@@ -1,11 +1,11 @@
 .col-2 {
-  margin: 1rem;
+  margin: 1.5rem;
 }
 
 .col-2 img {
   border-radius: 50%;
-  height: 15rem;
-  width: 15rem;
+  height: 20rem;
+  width: 20rem;
   cursor: pointer;
   filter: grayscale(100%);
 }
