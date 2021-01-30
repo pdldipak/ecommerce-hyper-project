@@ -2,18 +2,17 @@ import React from 'react';
 import './product.css';
 import Rating from './Rating';
 
-export default function Shoe({product}) {
+export default function Shoe({ product }) {
   return (
     <div key={product._id} className='product'>
-      <a href={`/product/${product._id}`}>
-        <div className='image-container'>
-          <img
-            className='medium'
-            src={product.image}
-            alt={product.name}
-          />
-        </div>
-      </a>
+      <div className='image-container'>
+        <img
+          className='medium'
+          src={product.image}
+          alt={product.name}
+        />
+      </div>
+
       <div className='product-body'>
         <a href={`/product/${product._id}`}>
           <h2>{product.name}</h2>

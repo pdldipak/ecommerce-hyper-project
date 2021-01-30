@@ -7,37 +7,37 @@ function Brands() {
       <div className='row align-items-center'>
         <div className='col-2'>
           <img
-            src='images/dress5.jpg'
-            class='img-thumbnail'
-            alt='...'
+            src='images/freshlypicked.jpg'
+            className='img-thumbnail'
+            alt='freshlypicked'
           />
         </div>
         <div className='col-2'>
           <img
-            src='images/dress5.jpg'
-            class='img-thumbnail'
-            alt='...'
+            src='images/goumi.jpg'
+            className='img-thumbnail'
+            alt='goumi'
           />
         </div>
         <div className='col-2'>
           <img
-            src='images/dress5.jpg'
-            class='img-thumbnail'
-            alt='...'
+            src='images/hannaandersson.jpg'
+            className='img-thumbnail'
+            alt='hannaandersson'
           />
         </div>
         <div className='col-2'>
           <img
-            src='images/dress5.jpg'
-            class='img-thumbnail'
-            alt='...'
+            src='images/oldnavy.jpg'
+            className='img-thumbnail'
+            alt='oldnavy'
           />
         </div>
         <div className='col-2'>
           <img
-            src='images/dress5.jpg'
-            class='img-thumbnail'
-            alt='...'
+            src='images/tigerofsweden.jpg'
+            className='img-thumbnail'
+            alt='tigerofsweden'
           />
         </div>
       </div>
