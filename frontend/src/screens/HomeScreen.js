@@ -1,31 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Brands from '../components/Brands';
 import Offer from '../components/Offer';
 import Product from '../components/Product';
-//import data from '../data.json';
-import axios from 'axios';
 import Loading from '../components/atom/Loading';
 import ErrorMessage from '../components/atom/ErrorMessage';
+import { productsListAction } from '../redux/actions/productsAction';
 
 function HomeScreen() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const dispatch = useDispatch();
+  const productsList = useSelector((state) => state.productsList);
+  const { loading, products, error } = productsList;
 
-  const fetchData = async () => {
-    try {
-      setLoading(true);
-      const { data } = await axios.get('/api/products');
-      setLoading(false);
-      setProducts(data);
-    } catch (err) {
-      setError(err.message);
-      setLoading(false);
-    }
-  };
   useEffect(() => {
-    fetchData();
-  }, []);
+    dispatch(productsListAction());
+  }, [dispatch]);
 
   const clothes = products.filter(
     (product) => product.category === 'Cloth'
@@ -36,6 +25,7 @@ function HomeScreen() {
   const offerProducts = products.filter(
     (product) => product.offer === 'Yes'
   );
+
   return (
     <>
       {loading ? (
