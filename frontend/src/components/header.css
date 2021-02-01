@@ -27,3 +27,12 @@ a.brand {
   background: #bfc0c2;
   border-radius: 5px;
 }
+
+.display-items {
+  background-color: #ff69b4;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 0.1rem #ff69b4 solid;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.4rem;
+}

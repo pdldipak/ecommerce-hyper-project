@@ -5,7 +5,7 @@ import Offer from '../components/Offer';
 import Product from '../components/Product';
 import Loading from '../components/atom/Loading';
 import ErrorMessage from '../components/atom/ErrorMessage';
-import { productsListAction } from '../redux/actions/productsAction';
+import { productsListAction } from '../redux/actions/productsActions';
 
 function HomeScreen() {
   const dispatch = useDispatch();

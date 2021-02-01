@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './product.css';
 import Rating from './Rating';
 
@@ -14,19 +15,19 @@ export default function Product({ product }) {
       </div>
 
       <div className='product-body'>
-        <a href={`/product/${product._id}`}>
+        <NavLink to={`/product/${product._id}`}>
           <h2>{product.name}</h2>
-        </a>
+        </NavLink>
         <Rating
           rating={product.rating}
           numReviews={product.numReviews}
         ></Rating>
         <div className='product-button'>
           <div className='price'>{`Kr ${product.price}`}</div>
-          <a href={`/product/${product._id}`}>
+          <NavLink to={`/product/${product._id}`}>
             {' '}
-            <div className='btn btn-success'>Add to cart</div>
-          </a>
+            <button className='btn btn-success'>Add to cart</button>
+          </NavLink>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .productScreen-col-1 {
@@ -30,6 +30,13 @@
 }
 .price {
   font-size: 2rem;
+}
+
+.quantity-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem 0;
 }
 
 .primary-block {

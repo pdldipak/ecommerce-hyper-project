@@ -1,25 +1,28 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Link as Link1 } from 'react-scroll';
 import './header.css';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const cartItems = useSelector((state) => state.cartItems.cartItems);
   return (
     <div className='navbar-container'>
       <div>
-        <a className='brand' href='/'>
+        <NavLink className='brand' to='/'>
           Baby Store
-        </a>
+        </NavLink>
       </div>
       <div className='nav-block'>
         <ul>
           <li>
-            <a href='/'>Home</a>
+            <NavLink to='/'>Home</NavLink>
           </li>
           <li>
-            <a href='/'>Products</a>
+            <NavLink to='/'>Products</NavLink>
           </li>
           <li>
-            <a href='/'>
+            <NavLink to='/'>
               {' '}
               <Link1
                 activeClass='active'
@@ -31,18 +34,21 @@ const Header = () => {
               >
                 Shoes
               </Link1>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href='/'>Account</a>
+            <NavLink to='/'>Account</NavLink>
           </li>
           <li>
-            <a href='/'>
+            <NavLink to='/cart/:id?'>
               <i
                 className='bi bi-bag-plus'
                 style={{ 'font-size': '2.5rem' }}
               />
-            </a>
+              {cartItems.length > 0 && (
+                <span className='display-items'>{cartItems.length}</span>
+              )}
+            </NavLink>
           </li>
         </ul>
       </div>

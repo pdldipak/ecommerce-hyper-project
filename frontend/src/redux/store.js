@@ -6,9 +6,19 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import { productsDetailsReducer, productsListReducer } from './reducers/productsReducer';
+import {
+  productsDetailsReducer,
+  productsListReducer,
+} from './reducers/productsReducer';
+import { cartReducer } from './reducers/cartReducer';
 
-const initialState = {};
+const initialState = {
+  cartItems: {
+    cartItems: localStorage.getItem('cartItems')
+      ? JSON.parse(localStorage.getItem('cartItems'))
+      : [],
+  },
+};
 
 const composeEnhancer =
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -19,9 +29,10 @@ const enhancer = composeEnhancer(applyMiddleware(...middlewareList));
 const store = createStore(
   combineReducers({
     productsList: productsListReducer,
-    productsDetails:productsDetailsReducer,
+    productsDetails: productsDetailsReducer,
+    cartItems: cartReducer,
   }),
- initialState,
+  initialState,
   enhancer
 );
 
