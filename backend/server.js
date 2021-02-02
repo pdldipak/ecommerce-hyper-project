@@ -1,8 +1,13 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import express from 'express';
+import mongoose from 'mongoose';
+import  bodyParser from 'body-parser';
+import cors from 'cors'; 
+import dotenv from 'dotenv';
+dotenv.config();
 
-const data = require('./data.json');
+import userRouter from './routers/userRouter.js';
+import productRouter from './routers/productRouter.js';
+
 
 const app = express();
 
@@ -11,23 +16,28 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json({ limit: '2mb' }));
 app.use(cors());
 
-app.get('/api/products/:id', (req, res) => {
-  const product = data.products.find(
-    (product) => product._id === req.params.id
-  );
-  if (product) {
-    res.send(product);
-  } else {
-    res.status(404).send({ message: 'Product Not Found' });
-  }
-});
+//connect to mongoDB
+mongoose
+  .connect(process.env.MONGODB_URL || process.env.DATABASE, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('DB CONNECTED'))
+  .catch((err) => console.log('DB CONNECTION ERR', err));
 
-app.get('/api/products', (req, res) => {
-  res.send(data.products);
-});
+
+//routing 
+app.use('/api/users', userRouter);
+app.use('/api/products', productRouter);
 
 app.get('/', (req, res) => {
   res.send('Server is running');
+});
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
 });
 
 // port
