@@ -2,7 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import ErrorMessage from '../components/atom/ErrorMessage';
-import { addToCartAction, removeFromCartAction } from '../redux/actions/cartActions';
+import {
+  addToCartAction,
+  removeFromCartAction,
+} from '../redux/actions/cartActions';
 import './cartScreen.css';
 
 const CartScreen = (props) => {
@@ -17,13 +20,13 @@ const CartScreen = (props) => {
       dispatch(addToCartAction(productId, quantity));
     }
   }, [dispatch, productId, quantity]);
-  
+
   const removeFromCart = (id) => {
     dispatch(removeFromCartAction(id));
   };
 
   const checkout = () => {
-    props.history.push('/signin?redirect=shipping');
+    props.history.push('/signin');
   };
   return (
     <div className='cart-row'>
