@@ -5,7 +5,7 @@ import {
   SIGNOUT_REQUEST,
 } from '../types';
 
-export const userSigninReducer = (state = {}, action) => {
+export const userSignInReducer = (state = {}, action) => {
   switch (action.type) {
     case SIGNIN_REQUEST:
       return { loading: true };

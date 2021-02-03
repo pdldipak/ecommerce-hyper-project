@@ -9,7 +9,7 @@ import './header.css';
 const Header = () => {
   const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cartItems.cartItems);
-  const userInfo = useSelector((state) => state.userSignin.userInfo);
+  const userInfo = useSelector((state) => state.userSignIn.userInfo);
 
   const signOut = () => {
 dispatch(signOutAction())
@@ -76,7 +76,7 @@ dispatch(signOutAction())
                 </NavLink>
                 <div className='dropdown-content'>
                   <li>
-                    <NavLink to='/signout' onClick={signOut}>
+                    <NavLink to='/' onClick={signOut}>
                       Sign Out
                     </NavLink>
                   </li>
