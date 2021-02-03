@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './signinscreen.css';
-import { signinAction } from '../redux/actions/userAction';
+import { signInAction } from '../redux/actions/userAction';
 import Loading from '../components/atom/Loading';
 import ErrorMessage from '../components/atom/ErrorMessage';
 
 const SigninScreen = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo, loading, error } = userSignin;
+  const userSignIn = useSelector((state) => state.userSignIn);
+  const { userInfo, loading, error } = userSignIn;
   const dispatch = useDispatch();
 
   const redirect = props.location.search
@@ -19,7 +19,7 @@ const SigninScreen = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signinAction(email, password));
+    dispatch(signInAction(email, password));
   };
   useEffect(() => {
     if (userInfo) {
@@ -29,10 +29,8 @@ const SigninScreen = (props) => {
   return (
     <div className='cart'>
       <h1>Sign In</h1>
-      {loading &&
-        <Loading></Loading>}
-      {error &&
-        <ErrorMessage>{error}</ErrorMessage>}
+      {loading && <Loading></Loading>}
+      {error && <ErrorMessage>{error}</ErrorMessage>}
       <form onSubmit={submitHandler}>
         <ul className='form-container'>
           <li>

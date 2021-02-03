@@ -6,7 +6,7 @@ import {
   SIGNOUT_REQUEST,
 } from '../types';
 
-export const signinAction = (email, password) => async (dispatch) => {
+export const signInAction = (email, password) => async (dispatch) => {
   dispatch({ type: SIGNIN_REQUEST, payload: { email, password } });
   //sending ajax request 
   try {

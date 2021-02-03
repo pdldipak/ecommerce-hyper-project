@@ -11,7 +11,7 @@ import {
   productsListReducer,
 } from './reducers/productsReducer';
 import { cartReducer } from './reducers/cartReducer';
-import { userSigninReducer } from './reducers/userSigninReducer';
+import { userSignInReducer } from './reducers/userSigninReducer';
 
 const initialState = {
   cartItems: {
@@ -19,7 +19,7 @@ const initialState = {
       ? JSON.parse(localStorage.getItem('cartItems'))
       : [],
   },
-  userSignin: {
+  userSignIn: {
     userInfo: localStorage.getItem('userInfo')
       ? JSON.parse(localStorage.getItem('userInfo'))
       : null,
@@ -37,7 +37,7 @@ const store = createStore(
     productsList: productsListReducer,
     productsDetails: productsDetailsReducer,
     cartItems: cartReducer,
-    userSignin: userSigninReducer,
+    userSignIn: userSignInReducer,
   }),
   initialState,
   enhancer
