@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './signinscreen.css';
-import { signInAction } from '../redux/actions/userAction';
+import { registerAction } from '../redux/actions/userAction';
 import Loading from '../components/atom/Loading';
 import ErrorMessage from '../components/atom/ErrorMessage';
 
-const SigninScreen = (props) => {
+const RegisterScreen = (props) => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const userSignIn = useSelector((state) => state.userSignIn);
-  const { userInfo, loading, error } = userSignIn;
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const userRegister = useSelector((state) => state.userRegister);
+  const { userInfo, loading, error } = userRegister;
   const dispatch = useDispatch();
 
   const redirect = props.location.search
@@ -19,7 +21,11 @@ const SigninScreen = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signInAction(email, password));
+    if (password !== confirmPassword) {
+      alert('Password and confirm password are not match');
+    } else {
+      dispatch(registerAction(name, email, password));
+    }
   };
   useEffect(() => {
     if (userInfo) {
@@ -28,11 +34,23 @@ const SigninScreen = (props) => {
   }, [props.history, redirect, userInfo]);
   return (
     <div className='cart'>
-      <h1>Log In</h1>
+      <h1>Register</h1>
       {loading && <Loading></Loading>}
       {error && <ErrorMessage>{error}</ErrorMessage>}
       <form onSubmit={submitHandler}>
         <ul className='form-container'>
+          <li>
+            <label htmlFor='name'>Name</label>
+            <input
+              type='text'
+              id='name'
+              name='name'
+              placeholder='Enter Name'
+              value={name}
+              required
+              onChange={(e) => setName(e.target.value)}
+            ></input>
+          </li>
           <li>
             <label htmlFor='email'>Email</label>
             <input
@@ -55,20 +73,31 @@ const SigninScreen = (props) => {
               onChange={(e) => setPassword(e.target.value)}
             ></input>
           </li>
+          <li>
+            <label htmlFor='confirmPassword'>Confirm Password</label>
+            <input
+              name='confirmPassword'
+              type='password'
+              placeholder='Confirm Password'
+              value={confirmPassword}
+              required
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            ></input>
+          </li>
 
           <li>
             <button className='primary-block' type='submit'>
-              SignIn
+              Register
             </button>
           </li>
         </ul>
         <div className='to-register'>
-          New Customer{' '}
-          <NavLink to={`/register?redirect=${redirect}`}>Create your account</NavLink>
+          Already have an account{' '}
+          <NavLink to={`/signin?redirect=${redirect}`}>LogIn</NavLink>
         </div>
       </form>
     </div>
   );
 };
 
-export default SigninScreen;
+export default RegisterScreen;

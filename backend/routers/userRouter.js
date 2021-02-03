@@ -41,6 +41,26 @@ userRouter.post('/signin', async (req, res) => {
   }
 });
 
+userRouter.post('/register', async (req, res) => {
+  try {
+    const user = new User({
+      name: req.body.name,
+      email: req.body.email,
+      password: bcrypt.hashSync(req.body.password, 8),
+    });
+    const createdUser = await user.save();
+    res.send({
+      _id: createdUser._id,
+      name: createdUser.name,
+      email: createdUser.email,
+      isAdmin: createdUser.isAdmin,
+      token: generateToken(createdUser),
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
 export default userRouter;
 
 // import expressAsyncHandler from 'express-async-handler'

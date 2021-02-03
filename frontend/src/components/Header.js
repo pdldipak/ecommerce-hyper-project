@@ -5,14 +5,13 @@ import { Link as Link1 } from 'react-scroll';
 import { signOutAction } from '../redux/actions/userAction';
 import './header.css';
 
-
 const Header = () => {
   const dispatch = useDispatch();
-    const cartItems = useSelector((state) => state.cartItems.cartItems);
+  const cartItems = useSelector((state) => state.cartItems.cartItems);
   const userInfo = useSelector((state) => state.userSignIn.userInfo);
 
   const signOut = () => {
-dispatch(signOutAction())
+    dispatch(signOutAction());
   };
   return (
     <div className='navbar-container'>

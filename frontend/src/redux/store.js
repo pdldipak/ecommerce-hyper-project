@@ -11,7 +11,7 @@ import {
   productsListReducer,
 } from './reducers/productsReducer';
 import { cartReducer } from './reducers/cartReducer';
-import { userSignInReducer } from './reducers/userSigninReducer';
+import { userRegisterReducer, userSignInReducer } from './reducers/userSigninReducer';
 
 const initialState = {
   cartItems: {
@@ -38,6 +38,7 @@ const store = createStore(
     productsDetails: productsDetailsReducer,
     cartItems: cartReducer,
     userSignIn: userSignInReducer,
+    userRegister:userRegisterReducer,
   }),
   initialState,
   enhancer

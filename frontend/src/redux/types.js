@@ -12,8 +12,11 @@ export const FETCH_PRODUCTS_DETAILS_FAIL =
 //types of add OR remove to/from cart
 export const ADD_TO_CART_ITEMS = 'ADD_TO_CART_PRODUCT';
 export const REMOVE_FROM_CART_ITEMS = 'REMOVE_FROM_CART_ITEMS';
-//types of user signin and signout
+//types of user signin, signout and register
 export const SIGNIN_REQUEST = 'SIGNIN_REQUEST';
 export const SIGNIN_SUCCESS = 'SIGNIN_SUCCESS';
 export const SIGNIN_FAIL = 'SIGNIN_FAIL';
 export const SIGNOUT_REQUEST = 'SIGNOUT_REQUEST';
+export const REGISTER_REQUEST = 'REGISTER_REQUEST';
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAIL = 'REGISTER_FAIL';
