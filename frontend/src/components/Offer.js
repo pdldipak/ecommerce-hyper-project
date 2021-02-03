@@ -27,8 +27,8 @@ function Offer({ product }) {
           <div>
             <a href={`/product/${product._id}`}>
               <button className='btn-special'>
-                Buy Now
                 <span>
+                  Buy Now {' '}
                   <i className='bi bi-arrow-right' />
                 </span>
               </button>

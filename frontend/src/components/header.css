@@ -14,6 +14,7 @@ a.brand {
 
 .nav-block ul {
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -35,4 +36,28 @@ a.brand {
   border: 0.1rem #ff69b4 solid;
   padding: 0.2rem 0.6rem;
   font-size: 1.4rem;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #00b0b1;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bi {
+  font-size: 2rem;
 }

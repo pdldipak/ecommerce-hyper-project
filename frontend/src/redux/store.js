@@ -11,12 +11,18 @@ import {
   productsListReducer,
 } from './reducers/productsReducer';
 import { cartReducer } from './reducers/cartReducer';
+import { userSigninReducer } from './reducers/userSigninReducer';
 
 const initialState = {
   cartItems: {
     cartItems: localStorage.getItem('cartItems')
       ? JSON.parse(localStorage.getItem('cartItems'))
       : [],
+  },
+  userSignin: {
+    userInfo: localStorage.getItem('userInfo')
+      ? JSON.parse(localStorage.getItem('userInfo'))
+      : null,
   },
 };
 
@@ -31,6 +37,7 @@ const store = createStore(
     productsList: productsListReducer,
     productsDetails: productsDetailsReducer,
     cartItems: cartReducer,
+    userSignin: userSigninReducer,
   }),
   initialState,
   enhancer

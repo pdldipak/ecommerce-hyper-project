@@ -1,18 +1,17 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import  bodyParser from 'body-parser';
-import cors from 'cors'; 
+import bodyParser from 'body-parser';
+import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
 
-
 const app = express();
 
 //apply middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ limit: '2mb' }));
 app.use(cors());
 
@@ -27,8 +26,7 @@ mongoose
   .then(() => console.log('DB CONNECTED'))
   .catch((err) => console.log('DB CONNECTION ERR', err));
 
-
-//routing 
+//routing
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 
@@ -38,6 +36,7 @@ app.get('/', (req, res) => {
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
+  next();
 });
 
 // port
