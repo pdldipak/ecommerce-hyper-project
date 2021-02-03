@@ -40,7 +40,7 @@ function HomeScreen() {
           <div className='product-heading'>
             <h1>Feature Products: Clothes</h1>
           </div>
-          <div className='products-container'>
+          <div className='products-container' id='clothes'>
             {clothes.map((product) => (
               <Product key={product._id} product={product} />
             ))}
@@ -48,7 +48,7 @@ function HomeScreen() {
           <div className='product-heading'>
             <h1>Feature Products: Shoes</h1>
           </div>
-          <div className='products-container' id='cloth'>
+          <div className='products-container' id='shoes'>
             {shoes.map((product) => (
               <Product key={product._id} product={product} />
             ))}

@@ -1,11 +1,19 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Link as Link1 } from 'react-scroll';
+import { signOutAction } from '../redux/actions/userAction';
 import './header.css';
-import { useSelector } from 'react-redux';
+
 
 const Header = () => {
-  const cartItems = useSelector((state) => state.cartItems.cartItems);
+  const dispatch = useDispatch();
+    const cartItems = useSelector((state) => state.cartItems.cartItems);
+  const userInfo = useSelector((state) => state.userSignin.userInfo);
+
+  const signOut = () => {
+dispatch(signOutAction())
+  };
   return (
     <div className='navbar-container'>
       <div>
@@ -19,34 +27,72 @@ const Header = () => {
             <NavLink to='/'>Home</NavLink>
           </li>
           <li>
-            <NavLink to='/'>Products</NavLink>
+            <div className='dropdown'>
+              <NavLink to='/'>
+                Products <i className='bi bi-chevron-down' />{' '}
+              </NavLink>
+
+              <div className='dropdown-content'>
+                <li>
+                  <NavLink to='/'>
+                    {' '}
+                    <Link1
+                      activeClass='active'
+                      to='clothes'
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={100}
+                    >
+                      Clothes
+                    </Link1>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to='/'>
+                    {' '}
+                    <Link1
+                      activeClass='active'
+                      to='shoes'
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={100}
+                    >
+                      Shoes
+                    </Link1>
+                  </NavLink>
+                </li>
+              </div>
+            </div>
           </li>
+
           <li>
-            <NavLink to='/'>
-              {' '}
-              <Link1
-                activeClass='active'
-                to='cloth'
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={100}
-              >
-                Shoes
-              </Link1>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/'>Account</NavLink>
+            {userInfo ? (
+              <div className='dropdown'>
+                <NavLink to='/signin'>
+                  <i className='bi bi-person-check' />
+                  {userInfo.name}
+                </NavLink>
+                <div className='dropdown-content'>
+                  <li>
+                    <NavLink to='/signout' onClick={signOut}>
+                      Sign Out
+                    </NavLink>
+                  </li>
+                </div>
+              </div>
+            ) : (
+              <NavLink to='/signin'>Account</NavLink>
+            )}
           </li>
           <li>
             <NavLink to='/cart/:id?'>
-              <i
-                className='bi bi-bag-plus'
-                style={{ 'font-size': '2.5rem' }}
-              />
+              <i className='bi bi-bag-plus' />
               {cartItems.length > 0 && (
-                <span className='display-items'>{cartItems.length}</span>
+                <span className='display-items'>
+                  {cartItems.length}
+                </span>
               )}
             </NavLink>
           </li>
