@@ -37,7 +37,7 @@
 
 .cart-card-body {
   border: 0.1rem #aaa2a2 solid;
-  background-color: #f1e4e4;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 80%);
   border-radius: 0.5rem;
   margin: 2rem;
   padding: 1rem;
