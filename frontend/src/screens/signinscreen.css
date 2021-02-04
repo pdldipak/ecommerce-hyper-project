@@ -34,3 +34,18 @@ input {
 .to-register {
   text-align: center;
 }
+
+.form-container.form-radio li {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.form-container.form-radio li input {
+  margin-right: 1.2rem;
+}
+
+.radio {
+  height: 2rem;
+  width: 2rem;
+}
