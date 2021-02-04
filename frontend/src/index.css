@@ -63,6 +63,10 @@ li {
   background-color: #cec0c0;
 }
 
+.spinner-border {
+  display: block !important;
+}
+
 .badge {
   background-color: #f02020;
   color: #ffffff;

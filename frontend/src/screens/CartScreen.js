@@ -113,7 +113,7 @@ const CartScreen = (props) => {
                 className='primary-block'
                 disabled={cartItems.length === 0}
               >
-                Proceed to Checkout
+                Checkout
               </button>
             </li>
           </ul>
