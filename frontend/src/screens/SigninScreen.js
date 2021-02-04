@@ -64,7 +64,9 @@ const SigninScreen = (props) => {
         </ul>
         <div className='to-register'>
           New Customer{' '}
-          <NavLink to={`/register?redirect=${redirect}`}>Create your account</NavLink>
+          <NavLink to={`/register?redirect=${redirect}`}>
+            Create your account
+          </NavLink>
         </div>
       </form>
     </div>
