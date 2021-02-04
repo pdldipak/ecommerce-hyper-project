@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 1rem 0;
 }
 h2 {
@@ -80,7 +80,7 @@ li {
   padding: 1rem;
   border: 0.1rem #c0c0c0 solid;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border-radius: 0.5rem;
   background-color: #20bf6b;
 }

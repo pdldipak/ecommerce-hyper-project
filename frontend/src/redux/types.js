@@ -22,3 +22,5 @@ export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
 export const REGISTER_FAIL = 'REGISTER_FAIL';
 //shipping address
 export const SAVE_SHIPPING_ADDRESS = 'SAVE_SHIPPING_ADDRESS';
+//Ppayment method
+export const SAVE_PAYMENT = 'SAVE_PAYMENT';
