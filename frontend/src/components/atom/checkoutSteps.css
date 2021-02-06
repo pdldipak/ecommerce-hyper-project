@@ -3,12 +3,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 5rem 0;
 }
 .checkout_steps > div {
   border-top: 1rem #c0c0c0 solid;
   color: #c0c0c0;
   flex: 1;
-  padding: 1.2rem;
+  padding: 2rem;
   font-weight: bold;
 }
 .checkout_steps > div.active {

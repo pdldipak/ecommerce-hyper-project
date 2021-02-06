@@ -1,11 +1,12 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import './offer.css';
 
 function Offer({ product }) {
   return (
     <Fade top>
-      <div className='offer-row' key={product._id}>
+      <div className='offer-row' key={product._id} id='offer'>
         <div className='offer-col-2'>
           <h1>
             Special off for newly born baby
@@ -25,14 +26,14 @@ function Offer({ product }) {
             mollit ex aute
           </p>
           <div>
-            <a href={`/product/${product._id}`}>
+            <NavLink to={`/product/${product._id}`}>
               <button className='btn-special'>
                 <span>
                   Buy Now {' '}
                   <i className='bi bi-arrow-right' />
                 </span>
               </button>
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className='offer-col-2'>

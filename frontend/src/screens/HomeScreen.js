@@ -26,6 +26,10 @@ function HomeScreen() {
     (product) => product.offer === 'Yes'
   );
 
+
+  const brandLogo = [
+    ...new Set(products.map((product) => product.logo)),
+  ];
   return (
     <>
       {loading ? (
@@ -54,8 +58,8 @@ function HomeScreen() {
             ))}
           </div>
           <div className='product-heading' id='brand'>
-            <h1>Brand we trust so you</h1>
-            <Brands />
+                <h1>Brand we trust so you</h1>
+                 <Brands products={brandLogo} />
           </div>
         </div>
       )}

@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import CheckoutSteps from '../components/atom/CheckoutSteps';
 import { useDispatch, useSelector } from 'react-redux';
 import './signinscreen.css';
+import './cartScreen.css';
 import { savePaymentAction } from '../redux/actions/cartActions';
 
 const PaymentScreen = (props) => {
-  const [payment, setPayment] = useState('');
+  const [payment, setPayment] = useState('Stripe');
   const dispatch = useDispatch();
   const submit = (e) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ const PaymentScreen = (props) => {
                 className='radio'
                 type='radio'
                 id='stripe'
-                value='Stripe'
+                value={payment}
                 name='payment'
                 required
                 onChange={(e) => setPayment(e.target.value)}

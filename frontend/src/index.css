@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   padding: 1rem 0;
 }
 h2 {
@@ -41,10 +41,10 @@ li {
 }
 
 .success {
-  color: #20a020;
+  color: #12b35d;
 }
 .danger {
-  color: #f01212;
+  color: #ca1111;
 }
 .alert {
   padding: 1rem;
@@ -55,11 +55,11 @@ li {
   align-items: center;
 }
 .alert-info {
-  color: #f01212;
+  color: #ca1111;
   background-color: #e0e0ff;
 }
 .alert-danger {
-  color: #f01212;
+  color: #ca1111;
   background-color: #cec0c0;
 }
 
@@ -68,7 +68,7 @@ li {
 }
 
 .badge {
-  background-color: #f02020;
+  background-color: #ca1111;
   color: #ffffff;
   border-radius: 50%;
   padding: 0.2rem 0.7rem;
@@ -82,7 +82,7 @@ li {
   cursor: pointer;
   font-size: 1.5rem;
   border-radius: 0.5rem;
-  background-color: #20bf6b;
+  background-color: #12b35d;
 }
 .btn:hover {
   background: #2fad73;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './product.css';
 import Rating from './Rating';
 
@@ -14,9 +15,9 @@ export default function Shoe({ product }) {
       </div>
 
       <div className='product-body'>
-        <a href={`/product/${product._id}`}>
+        <NavLink to={`/product/${product._id}`}>
           <h2>{product.name}</h2>
-        </a>
+        </NavLink>
         <Rating
           rating={product.rating}
           numReviews={product.numReviews}
