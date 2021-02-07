@@ -21,7 +21,6 @@ const Header = () => {
       <div>
         <NavLink className='brand' to='/'>
           <img
-            // src='images/logo.jpg'
             src={`${process.env.PUBLIC_URL}/images/logo.jpg`}
             alt='Baby Store'
             className='brand'
@@ -76,6 +75,9 @@ const Header = () => {
                   {userInfo.name}
                 </NavLink>
                 <div className='dropdown-content'>
+                  <div>
+                    <NavLink to='/orderhistory'>Orders</NavLink>
+                  </div>
                   <div>
                     <NavLink to='/' onClick={() => signOut()}>
                       Sign Out

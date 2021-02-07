@@ -12,6 +12,7 @@ import ProductScreen from './screens/ProductScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddress from './screens/ShippingAddress';
 import SigninScreen from './screens/SigninScreen';
+import UserOrderHistoryScreen from './screens/UserOrderHistoryScreen';
 
 const App = () => {
   return (
@@ -31,6 +32,9 @@ const App = () => {
             <Route path='/payment' component={PaymentScreen} />
             <Route path='/placeholder' component={OrderScreen} />
             <Route path='/order/:id' component={ConformOrderScreen} />
+            <Route path='/orderhistory' component={UserOrderHistoryScreen} />
+
+            
           </Switch>
         </main>
         <footer>

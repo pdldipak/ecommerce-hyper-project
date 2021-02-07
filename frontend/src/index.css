@@ -29,11 +29,12 @@ h2 {
 }
 
 a {
+  color: #0a0a0a;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffd000;
+  color: #c9a403;
 }
 
 li {
