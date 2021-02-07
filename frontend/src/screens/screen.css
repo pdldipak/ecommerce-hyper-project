@@ -74,3 +74,26 @@ button:hover {
   width: 20rem;
   text-align: center;
 }
+.orders {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #fad9d9;
+}
+
+.table td {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CheckoutSteps from '../components/atom/CheckoutSteps';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './signinscreen.css';
 import './cartScreen.css';
 import { savePaymentAction } from '../redux/actions/cartActions';
