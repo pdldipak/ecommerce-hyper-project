@@ -16,9 +16,9 @@ const PaymentScreen = (props) => {
   return (
     <div>
       <CheckoutSteps step1 step2 step3></CheckoutSteps>
-      <div className='cart' style={{ marginTop: '1rem' }}>
-        <h1>Payment method</h1>
+      <div className='cart'>
         <form onSubmit={submit}>
+          <h1>Payment methods</h1>
           <ul className='form-container form-radio'>
             <li>
               <input

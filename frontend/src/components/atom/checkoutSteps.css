@@ -1,13 +1,13 @@
 .checkout_steps {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 5rem 0;
 }
 .checkout_steps > div {
-  border-top: 1rem #c0c0c0 solid;
-  color: #c0c0c0;
+  border-top: 1rem #999898 solid;
+  color: #999898;
   flex: 1;
   padding: 2rem;
   font-weight: bold;

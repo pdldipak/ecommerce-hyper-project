@@ -16,19 +16,15 @@ const Footer = () => {
         <div className='footer-col-1'>
           <h3>Availabe for Android and IOS</h3>
           <div className='app-logo'>
-            <NavLink to='/'>
-              <img
-                src={`${process.env.PUBLIC_URL}/images/app-store.png`}
-                alt='APP Store'
-              />
-            </NavLink>
-            <NavLink to='/'>
-              {' '}
-              <img
-                src={`${process.env.PUBLIC_URL}/images/play-store.png`}
-                alt='Google Store'
-              />
-            </NavLink>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/app-store.png`}
+              alt='APP Store'
+            />
+
+            <img
+              src={`${process.env.PUBLIC_URL}/images/play-store.png`}
+              alt='Google Store'
+            />
           </div>
         </div>
         <div className='footer-col-2'>

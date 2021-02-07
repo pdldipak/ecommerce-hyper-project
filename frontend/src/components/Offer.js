@@ -9,7 +9,7 @@ function Offer({ product }) {
       <div className='offer-row' key={product._id} id='offer'>
         <div className='offer-col-2'>
           <h1>
-            Special off for newly born baby
+            Special discount to new customers
             <br />
             For Limited time
           </h1>

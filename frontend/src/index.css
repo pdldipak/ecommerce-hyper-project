@@ -82,10 +82,9 @@ li {
   cursor: pointer;
   font-size: 1.5rem;
   border-radius: 0.5rem;
-  background-color: #12b35d;
+  background-color: #0d8243;
 }
 .btn:hover {
-  background: #2fad73;
   border: 0.1rem #808080 solid;
 }
 

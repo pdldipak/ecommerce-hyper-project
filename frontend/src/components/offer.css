@@ -30,7 +30,7 @@
 .btn-special {
   display: flex;
   float: center;
-  background-color: #20bf6b;
+  background-color: #0d8243;
   color: #ffffff;
   padding: 0.8rem 3rem;
   margin: 3rem 0;
@@ -40,7 +40,6 @@
 }
 
 .btn-special:hover {
-  background: #2fad73;
   border: 0.1rem #808080 solid;
 }
 

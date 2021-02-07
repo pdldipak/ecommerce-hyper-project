@@ -4,6 +4,7 @@ import './app.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import CartScreen from './screens/CartScreen';
+import ConformOrderScreen from './screens/ConformOrderScreen';
 import HomeScreen from './screens/HomeScreen';
 import OrderScreen from './screens/OrderScreen';
 import PaymentScreen from './screens/PaymentScreen';
@@ -29,6 +30,7 @@ const App = () => {
             <Route path='/shipping' component={ShippingAddress} />
             <Route path='/payment' component={PaymentScreen} />
             <Route path='/placeholder' component={OrderScreen} />
+            <Route path='/order/:id' component={ConformOrderScreen} />
           </Switch>
         </main>
         <footer>

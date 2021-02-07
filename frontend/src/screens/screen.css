@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.screen-row.conform {
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
 
 .screen-col-1 {
   flex: 1;
@@ -49,7 +54,8 @@
   border-radius: 0.5rem;
   border: 0.1rem #c2bdbd solid;
   font-size: 1.6rem;
-  background-color: #20bf6b;
+  background-color: #0d8243;
+  color: white;
   cursor: pointer;
 }
 button:hover {

@@ -1,20 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './screen.css';
 import CheckoutSteps from '../components/atom/CheckoutSteps';
+import { createOrder } from '../redux/actions/orderAction';
+import Loading from '../components/atom/Loading';
+import ErrorMessage from '../components/atom/ErrorMessage';
+import { CREATE_ORDER_RESET } from '../redux/types';
 
 const OrderScreen = (props) => {
   const dispatch = useDispatch();
   const cartItemsData = useSelector((state) => state.cartItems);
   const { shippingAddress, paymentMethod, cartItems } = cartItemsData;
-  if (!cartItemsData.paymentMethod) {
+  if (!paymentMethod) {
     props.history.push('/payment');
   }
+  const orderCreate = useSelector((state) => state.orderCreate);
+  const { loading, success, error, order } = orderCreate;
+
   const totalPrice = cartItems.reduce(
     (a, c) => a + c.price * c.quantity,
     0
   );
+  const placeOrder = () => {
+    dispatch(
+      createOrder({
+        ...cartItemsData,
+        orderItems: cartItemsData.cartItems,
+      })
+    );
+  };
+  useEffect(() => {
+    if (success) {
+      props.history.push(`/order/${order._id}`);
+      dispatch({ type: CREATE_ORDER_RESET });
+    }
+  }, [dispatch, order, props.history, success]);
   return (
     <div>
       <CheckoutSteps step1 step2 step3 step4 />
@@ -67,11 +88,20 @@ const OrderScreen = (props) => {
           <div className='cart-card-body'>
             <ul>
               <li>
-                <h2>Total Amount: Kr {totalPrice}</h2>
+                <h2>
+                  Total Amount: Kr <strong>{totalPrice}</strong>
+                </h2>
               </li>
               <li>
-                <button className='primary-block pay'>Save Order</button>
+                <button
+                  className='primary-block pay'
+                  onClick={placeOrder}
+                >
+                  Save Order
+                </button>
               </li>
+              {loading && <Loading></Loading>}
+              {error && <ErrorMessage>{error}</ErrorMessage>}
             </ul>
           </div>
         </div>
