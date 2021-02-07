@@ -3,7 +3,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 2.5rem;
+  /* margin-top: 5rem; */
+  padding-top:3rem;
 }
 .cart-row.center {
   display: flex;
@@ -37,9 +38,14 @@
 
 .cart-card-body {
   border: 0.1rem #aaa2a2 solid;
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 80%);
+  background: linear-gradient(
+    90deg,
+    rgba(169, 248, 252, 1) 0%,
+    rgba(137, 223, 220, 1) 36%,
+    rgba(219, 241, 246, 1) 100%
+  );
   border-radius: 0.5rem;
-  margin: 2rem;
+  margin: 2rem 5rem;
   padding: 1rem;
   align-items: center;
 }

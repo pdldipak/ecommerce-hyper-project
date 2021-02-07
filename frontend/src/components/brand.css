@@ -1,13 +1,14 @@
 .col-2 {
-  margin: 1.5rem;
+  margin: 2rem 2rem 5rem 2rem;
+  max-height: 30rem;
+  max-width: 30rem;
 }
 
 .col-2 img {
   border-radius: 50%;
-  height: 20rem;
-  width: 20rem;
   cursor: pointer;
   filter: grayscale(100%);
+  width: 100%;
 }
 
 .col-2 img:hover {

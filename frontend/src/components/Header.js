@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { Link as Link1 } from 'react-scroll';
+import { Link } from 'react-scroll';
+
 import { signOutAction } from '../redux/actions/userAction';
 import './header.css';
 
 const Header = () => {
+  const [showLinks, setShowLinks] = useState(false);
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartItems.cartItems);
   const userInfo = useSelector((state) => state.userSignIn.userInfo);
@@ -13,15 +15,21 @@ const Header = () => {
   const signOut = () => {
     dispatch(signOutAction());
   };
+
   return (
     <div className='navbar-container'>
       <div>
         <NavLink className='brand' to='/'>
-          Baby Store
+          <img
+            // src='images/logo.jpg'
+            src={`${process.env.PUBLIC_URL}/images/logo.jpg`}
+            alt='Baby Store'
+            className='brand'
+          />
         </NavLink>
       </div>
-      <div className='nav-block'>
-        <ul>
+      <div>
+        <ul className='nav-block' id={showLinks ? 'hidden' : ''}>
           <li>
             <NavLink to='/'>Home</NavLink>
           </li>
@@ -32,36 +40,30 @@ const Header = () => {
               </NavLink>
 
               <div className='dropdown-content'>
-                <li>
-                  <NavLink to='/'>
-                    {' '}
-                    <Link1
-                      activeClass='active'
-                      to='clothes'
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={100}
-                    >
-                      Clothes
-                    </Link1>
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to='/'>
-                    {' '}
-                    <Link1
-                      activeClass='active'
-                      to='shoes'
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={100}
-                    >
-                      Shoes
-                    </Link1>
-                  </NavLink>
-                </li>
+                <div>
+                  <Link
+                    activeClass='active'
+                    to='clothes'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Clothes
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    activeClass='active'
+                    to='shoes'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={100}
+                  >
+                    Shoes
+                  </Link>
+                </div>
               </div>
             </div>
           </li>
@@ -70,15 +72,15 @@ const Header = () => {
             {userInfo ? (
               <div className='dropdown'>
                 <NavLink to='/signin'>
-                  <i className='bi bi-person-check' />
+                  <i className='bi bi-person' />
                   {userInfo.name}
                 </NavLink>
                 <div className='dropdown-content'>
-                  <li>
-                    <NavLink to='/' onClick={signOut}>
+                  <div>
+                    <NavLink to='/' onClick={() => signOut()}>
                       Sign Out
                     </NavLink>
-                  </li>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -97,6 +99,12 @@ const Header = () => {
           </li>
         </ul>
       </div>
+      <img
+        src={`${process.env.PUBLIC_URL}/images/menu.png`}
+        alt='Menu'
+        className='menu-icon'
+        onClick={() => setShowLinks(!showLinks)}
+      />
     </div>
   );
 };

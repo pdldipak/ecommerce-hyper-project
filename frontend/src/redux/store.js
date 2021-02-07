@@ -15,6 +15,7 @@ import {
   userRegisterReducer,
   userSignInReducer,
 } from './reducers/userSigninReducer';
+import { orderCreateReducer, orderDetailsReducer } from './reducers/orderReducer';
 
 const initialState = {
   cartItems: {
@@ -24,7 +25,8 @@ const initialState = {
     shippingAddress: localStorage.getItem('shippingAddress')
       ? JSON.parse(localStorage.getItem('shippingAddress'))
       : {},
-    paymentMethod:'Stripe'
+    paymentMethod: 'Stripe',
+    totalPrice:''
     
   },
   userSignIn: {
@@ -47,6 +49,8 @@ const store = createStore(
     cartItems: cartReducer,
     userSignIn: userSignInReducer,
     userRegister: userRegisterReducer,
+    orderCreate: orderCreateReducer,
+    orderDetails: orderDetailsReducer,
   }),
   initialState,
   enhancer

@@ -5,7 +5,7 @@ import ErrorMessage from '../components/atom/ErrorMessage';
 import Loading from '../components/atom/Loading';
 import Rating from '../components/Rating';
 import { productDetailsAction } from '../redux/actions/productsActions';
-import './productScreen.css';
+import './screen.css';
 
 const ProductScreen = (props) => {
   const [quantity, setQuantity] = useState(1);
@@ -34,19 +34,19 @@ const ProductScreen = (props) => {
           <NavLink to='/'>
             <i
               className='bi bi-arrow-left-short'
-              style={{ 'font-size': '3rem' }}
+              style={{ fontSize: '3rem' }}
             ></i>
             Back to Home
           </NavLink>
-          <div className='productScreen-row'>
-            <div className='productScreen-col-2'>
+          <div className='screen-row'>
+            <div className='screen-col-1'>
               <img
                 className='large'
                 src={product.image}
                 alt={product.name}
               ></img>
             </div>
-            <div className='productScreen-col-1'>
+            <div className='screen-col-1'>
               <ul>
                 <li>
                   <h1>{product.name}</h1>
@@ -64,17 +64,17 @@ const ProductScreen = (props) => {
                 </li>
               </ul>
             </div>
-            <div className='productScreen-col-1'>
+            <div className='screen-col-1'>
               <div className='card card-body'>
                 <ul>
                   <li>
-                    <div className='productScreen-row'>
+                    <div className='screen-row'>
                       <div>Price</div>
                       <div className='price'>Kr {product.price}</div>
                     </div>
                   </li>
                   <li>
-                    <div className='productScreen-row'>
+                    <div className='screen-row'>
                       <div>Status</div>
                       <div>
                         {product.countInStock > 0 ? (

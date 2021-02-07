@@ -1,15 +1,20 @@
-.productScreen-row {
+.screen-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 1.5rem;
+}
+.screen-row.conform {
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
 }
 
-.productScreen-col-1 {
-  flex: 1 1 20rem;
+.screen-col-1 {
+  flex: 1;
+  margin-bottom: 1rem;
 }
-.productScreen-col-2 {
-  flex: 2 1 30rem;
+.screen-col-2 {
+  flex: 2;
   margin-bottom: 1rem;
 }
 
@@ -18,7 +23,12 @@
 }
 .card {
   border: 0.1rem #aaa2a2 solid;
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 80%);
+  background: linear-gradient(
+    90deg,
+    rgba(169, 248, 252, 1) 0%,
+    rgba(137, 223, 220, 1) 36%,
+    rgba(219, 241, 246, 1) 100%
+  );
   border-radius: 0.5rem;
   margin: 1rem;
 }
@@ -44,9 +54,9 @@
   border-radius: 0.5rem;
   border: 0.1rem #c2bdbd solid;
   font-size: 1.6rem;
-  background-color: #20bf6b;
+  background-color: #0d8243;
+  color: white;
   cursor: pointer;
-  width: 100%;
 }
 button:hover {
   border: 0.1rem #404040 solid;
@@ -58,4 +68,9 @@ button:focus {
 }
 button:hover {
   border: 0.1rem #404040 solid;
+}
+
+.primary-block.pay {
+  width: 20rem;
+  text-align: center;
 }
