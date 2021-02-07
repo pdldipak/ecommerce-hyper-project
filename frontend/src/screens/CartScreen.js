@@ -34,7 +34,7 @@ const CartScreen = (props) => {
         <NavLink to='/'>
           <i
             className='bi bi-arrow-left-short'
-            style={{ 'fontSize': '3rem' }}
+            style={{ fontSize: '3rem' }}
           ></i>
           Back to Home
         </NavLink>
@@ -62,7 +62,10 @@ const CartScreen = (props) => {
                         className='img-small'
                       ></img>
                     </div>
-                    <div className='cart-text'>
+                    <div
+                      className='cart-text'
+                      style={{ flexBasis: '25%' }}
+                    >
                       <NavLink to={`/product/${item.product}`}>
                         {item.name}
                       </NavLink>

@@ -9,6 +9,7 @@ import './screen.css';
 
 const ProductScreen = (props) => {
   const [quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState('');
   const dispatch = useDispatch();
   const productId = props.match.params.id;
 
@@ -73,6 +74,7 @@ const ProductScreen = (props) => {
                       <div className='price'>Kr {product.price}</div>
                     </div>
                   </li>
+
                   <li>
                     <div className='screen-row'>
                       <div>Status</div>
@@ -85,10 +87,28 @@ const ProductScreen = (props) => {
                       </div>
                     </div>
                   </li>
+
                   {product.countInStock > 0 && (
                     <>
                       <li>
-                        <div className='quantity-row'>
+                        <div className='screen-row'>
+                          <div>Size</div>
+                          <div>
+                            <select
+                              value={size}
+                              onChange={(e) =>
+                                setSize(e.target.value)
+                              }
+                            >
+                              {product.availableSizes.map((size) => (
+                                <option key={size}>{size}</option>
+                              ))}
+                            </select>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className='screen-row'>
                           <div>Quantity</div>
                           <div>
                             <select
@@ -108,6 +128,7 @@ const ProductScreen = (props) => {
                           </div>
                         </div>
                       </li>
+
                       <li>
                         <button
                           onClick={addToCart}
@@ -129,3 +150,70 @@ const ProductScreen = (props) => {
 };
 
 export default ProductScreen;
+
+// // {product.countInStock > 0 && (
+// //   <>
+// //     <li>
+// //       <div className='quantity-row'>
+// //         <div>Quantity</div>
+// //         <div>
+// //           <select
+// //             value={quantity}
+// //             onChange={(e) =>
+// //               setQuantity(e.target.value)
+// //             }
+// //           >
+// //             {[
+// //               ...Array(product.countInStock).keys(),
+// //             ].map((x) => (
+// //               <option key={x + 1} value={x + 1}>
+// //                 {x + 1}
+// //               </option>
+// //             ))}
+// //           </select>
+// //         </div>
+// //       </div>
+// //     </li>
+// //     <li>
+// //       <button
+// //         onClick={addToCart}
+// //         className='primary-block'
+// //       >
+// //         Add to Cart
+// //       </button>
+// //     </li>
+// //   </>
+
+// // const [size, setSize] = useState('');
+
+// product.availableSizes.map((x) => (
+//   <select>
+//     <option>{x}</option>
+//   </select>
+// ));
+
+// // const sortBySize = (e) => {
+// //   e.preventDefault();
+// //   console.log('Size-', e.target.value);
+// //   if (e.target.value === '') {
+// //     setProduct(() => data.products);
+// //     setSize(() => e.target.value);
+// //   } else {
+// //     setSize(() => e.target.value);
+// //     setProduct((products) =>
+// //       data.products.filter(
+// //         (product) =>
+// //           product.availableSizes.indexOf(e.target.value) >= 0
+// //       )
+// //     );
+// //   }
+// // };
+
+// <div className='quantity-row'>
+//   <div>Quantity</div>
+//   <div>{product.availableSizes.map((x) => (
+//   <select>
+//     <option>{x}</option>
+//   </select>
+// )) }</div>
+// </div>
