@@ -26,7 +26,6 @@ function HomeScreen() {
     (product) => product.offer === 'Yes'
   );
 
-
   const brandLogo = [
     ...new Set(products.map((product) => product.logo)),
   ];
@@ -41,25 +40,25 @@ function HomeScreen() {
           {offerProducts.map((product) => (
             <Offer key={product._id} product={product} />
           ))}
-          <div className='product-heading'>
+          <div className='product-heading' id='clothes'>
             <h1>Feature Products: Clothes</h1>
           </div>
-          <div className='products-container' id='clothes'>
+          <div className='products-container'>
             {clothes.map((product) => (
               <Product key={product._id} product={product} />
             ))}
           </div>
-          <div className='product-heading'>
+          <div className='product-heading' id='shoes'>
             <h1>Feature Products: Shoes</h1>
           </div>
-          <div className='products-container' id='shoes'>
+          <div className='products-container'>
             {shoes.map((product) => (
               <Product key={product._id} product={product} />
             ))}
           </div>
           <div className='product-heading' id='brand'>
-                <h1>Brand we trust so you</h1>
-                 <Brands products={brandLogo} />
+            <h1>Brand we trust so you</h1>
+            <Brands products={brandLogo} />
           </div>
         </div>
       )}

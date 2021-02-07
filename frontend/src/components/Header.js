@@ -45,8 +45,8 @@ const Header = () => {
                     to='clothes'
                     spy={true}
                     smooth={true}
-                    offset={-70}
-                    duration={100}
+                    offset={-120}
+                    duration={500}
                   >
                     Clothes
                   </Link>
@@ -57,7 +57,7 @@ const Header = () => {
                     to='shoes'
                     spy={true}
                     smooth={true}
-                    offset={-70}
+                    offset={-120}
                     duration={100}
                   >
                     Shoes
