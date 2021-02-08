@@ -49,6 +49,7 @@ const UserOrderHistoryScreen = (props) => {
                     ))}
                   </td>
                   <td>
+                    Kr{' '}
                     {order.orderItems.reduce(
                       (a, c) => a + c.price * c.quantity,
                       0
