@@ -11,7 +11,7 @@
 }
 header {
   grid-area: header;
-  background-color:#046262;
+  background-color: #046262;
   padding: 2rem 0;
   display: inline-block;
   position: fixed;
@@ -27,7 +27,7 @@ header > div {
 }
 main {
   grid-area: main;
-  padding: 3rem, 2rem;
+  padding: 3rem, 0;
   background: radial-gradient(#fff, #d2ecfb);
 }
 .product-heading h1 {

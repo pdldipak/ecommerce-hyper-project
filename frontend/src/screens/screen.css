@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 1rem 0;
 }
 .screen-row.conform {
   justify-content: center;
@@ -42,13 +43,6 @@
   font-size: 2rem;
 }
 
-.quantity-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 1rem 0;
-}
-
 .primary-block {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -57,6 +51,7 @@
   background-color: #0d8243;
   color: white;
   cursor: pointer;
+  width: 100%;
 }
 button:hover {
   border: 0.1rem #404040 solid;
