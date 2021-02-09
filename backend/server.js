@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import path from 'path';
 import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -30,12 +31,13 @@ mongoose
 //routing
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
-app.use('/api/orders', orderRouter)
+app.use('/api/orders', orderRouter);
 
-//to render static file inside build folder 
-app.use('/', express.static(__dirname + '/frontend/build'));
+//to render static file inside build folder
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.get('*', (req, res) =>
-  res.sendFile(__dirname + '/frontend/build/index.html')
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
 
 // app.get('/', (req, res) => {
