@@ -21,7 +21,7 @@ const Header = () => {
       <div>
         <NavLink className='brand' to='/'>
           <img
-            src={`${process.env.PUBLIC_URL}/images/logo.jpg`}
+            src={`${process.env.PUBLIC_URL}/images/logo-shop.jpg`}
             alt='Baby Store'
             className='brand'
           />
