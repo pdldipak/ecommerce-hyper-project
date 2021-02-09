@@ -92,6 +92,15 @@ a {
     display: block;
     cursor: pointer;
   }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: -2rem;
+    right: -14rem;
+  }
 }
 
 @media (min-width: 651px) and (max-width: 800px) {

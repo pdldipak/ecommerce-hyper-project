@@ -69,7 +69,7 @@ const Header = () => {
 
           <li>
             {userInfo ? (
-              <div className='dropdown'>
+              <div className='dropdown' id='content'>
                 <NavLink to='/signin'>
                   <i className='bi bi-person' />
                   {userInfo.name}
