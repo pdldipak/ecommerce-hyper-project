@@ -29,11 +29,18 @@ const Header = () => {
       </div>
       <div>
         <ul className='nav-block' id={showLinks ? 'hidden' : ''}>
-          <li>
+          <li
+            id={!showLinks ? 'hidden' : ''}
+            onClick={() => setShowLinks(!showLinks)}
+          >
             <NavLink to='/'>Home</NavLink>
           </li>
           <li>
-            <div className='dropdown'>
+            <div
+              className='dropdown'
+              id={!showLinks ? 'hidden' : ''}
+              onClick={() => setShowLinks(!showLinks)}
+            >
               <NavLink to='/'>
                 Products <i className='bi bi-chevron-down' />{' '}
               </NavLink>
@@ -47,6 +54,8 @@ const Header = () => {
                     smooth={true}
                     offset={-120}
                     duration={500}
+                    id={!showLinks ? 'hidden' : ''}
+                    onClick={() => setShowLinks(!showLinks)}
                   >
                     Clothes
                   </Link>
@@ -59,6 +68,8 @@ const Header = () => {
                     smooth={true}
                     offset={-120}
                     duration={100}
+                    id={!showLinks ? 'hidden' : ''}
+                    onClick={() => setShowLinks(!showLinks)}
                   >
                     Shoes
                   </Link>
@@ -69,7 +80,11 @@ const Header = () => {
 
           <li>
             {userInfo ? (
-              <div className='dropdown' id='content'>
+              <div
+                className='dropdown'
+                id={!showLinks ? 'hidden' : ''}
+                onClick={() => setShowLinks(!showLinks)}
+              >
                 <NavLink to='/signin'>
                   <i className='bi bi-person' />
                   {userInfo.name}
@@ -86,12 +101,22 @@ const Header = () => {
                 </div>
               </div>
             ) : (
-              <NavLink to='/signin'>Account</NavLink>
+              <NavLink
+                to='/signin'
+                id={!showLinks ? 'hidden' : ''}
+                onClick={() => setShowLinks(!showLinks)}
+              >
+                Account
+              </NavLink>
             )}
           </li>
           <li>
             <NavLink to='/cart/:id?'>
-              <i className='bi bi-bag-plus' />
+              <i
+                className='bi bi-bag-plus'
+                id={!showLinks ? 'hidden' : ''}
+                onClick={() => setShowLinks(!showLinks)}
+              />
               {cartItems.length > 0 && (
                 <span className='display-items'>
                   {cartItems.length}

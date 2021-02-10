@@ -32,9 +32,10 @@ const App = () => {
             <Route path='/payment' component={PaymentScreen} />
             <Route path='/placeholder' component={OrderScreen} />
             <Route path='/order/:id' component={ConformOrderScreen} />
-            <Route path='/orderhistory' component={UserOrderHistoryScreen} />
-
-            
+            <Route
+              path='/orderhistory'
+              component={UserOrderHistoryScreen}
+            />
           </Switch>
         </main>
         <footer>
