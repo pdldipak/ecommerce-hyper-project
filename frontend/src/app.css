@@ -34,9 +34,10 @@ main {
   display: flex;
   position: relative;
   font-size: 3rem;
-  margin: 3.5rem 0;
+  margin: 3.5rem auto;
   justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
 }
 .product-heading h1:after {
   content: '';
