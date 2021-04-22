@@ -3,18 +3,18 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 2rem 5rem 2rem;
-  padding: 0 8rem;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 .offer-col-2 {
   flex-basis: 50%;
 }
 
 .offer-col-2 img {
-  width: 45rem;
-  height: 45rem;
+  width: 35rem;
+  height: 35rem;
   border-radius: 50%;
-  padding: 5rem;
+  padding: 2rem;
   clip-path: circle(100%);
   transition: clip-path 1s;
 }

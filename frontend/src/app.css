@@ -45,9 +45,6 @@ main {
   background: #046262;
   position: absolute;
   bottom: 0;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
 }
 
 footer {
@@ -62,8 +59,8 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
+  padding: 2rem 2rem;
+  margin: auto;
   list-style-type: none;
 }
 
