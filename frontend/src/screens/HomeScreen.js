@@ -37,9 +37,11 @@ function HomeScreen() {
         <ErrorMessage>{error}</ErrorMessage>
       ) : (
         <div>
-          {offerProducts.map((product) => (
-            <Offer key={product._id} product={product} />
-          ))}
+          <div className='products-container'>
+            {offerProducts.map((product) => (
+              <Offer key={product._id} product={product} />
+            ))}
+          </div>
           <div className='product-heading' id='clothes'>
             <h1>Feature Products: Clothes</h1>
           </div>

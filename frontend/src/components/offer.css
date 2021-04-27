@@ -3,8 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 2rem;
 }
 .offer-col-2 {
   flex-basis: 50%;
