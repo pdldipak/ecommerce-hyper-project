@@ -1,2 +1,2 @@
 # ecommerce-hyper-project
-Hyperisland Individual Project 
+Hyperisland Project 
