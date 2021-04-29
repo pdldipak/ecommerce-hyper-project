@@ -1,2 +1,1 @@
-# ecommerce-hyper-project
-Hyperisland Project 
+# ecommerce-project-practice
